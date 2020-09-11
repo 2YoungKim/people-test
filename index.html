@@ -23,18 +23,18 @@
  
                 var members = "";
                 var member = xmlDoc.getElementsByTagName("member");
+                var name = xmlDoc.getElementsByTagName("name");
                 console.log(member)
                 for (i = 0; i < member.length; i++) { 
-                    if (i != 0) { members += ", "; }
-                    for (j = 0; j<member[i].childNodes.length; j++) {
-                        members += ""
+                    if (i != 0) { members += ", "; }                    
+                    for (j=0; j < member.children.length; j++){
+                        members += member[i]. children[j].parentNode +" : " + member[i].children[j].firstChild.data + "<br />"
+                                /*+  "성별 : " + member[i].children[j].firstChild.data + "<br />"
+                                +  "출생연도 : " + member[i].children[j].firstChild.data + "<br />"
+                                +  "월 : " + member[i].children[j].firstChild.data + "<br />"
+                                +  "일 : " + member[i].children[j].firstChild.data + "<br />"
+                                +  "<br />"*/;
                     }
-                    members += "이름 : " + member[i].childNodes[j].data + "<br />"/*
-                            +  "성별 : " + member[i].firstChild.data + "<br />"
-                            +  "출생연도 : " + member[i].firstChild.data + "<br />"
-                            +  "월 : " + member[i].firstChild.data + "<br />"
-                            +  "일 : " + member[i].firstChild.data + "<br />"*/
-                            +  "<br />";
                 }
                 document.getElementById("members").innerHTML = members;
  
