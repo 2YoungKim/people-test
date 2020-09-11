@@ -4,9 +4,17 @@
   <members>
     <member>
       <name>사람1</name>
+      <sex>남</sex>
+      <by>1970</by>
+      <bm>9</bm>
+      <bd>13</bd>
     </member>
     <member>
       <name>사람2</name>
+      <sex>여</sex>
+      <by>1974</by>
+      <bm>12</bm>
+      <bd>1</bd>
     </member>
   </members>
 
