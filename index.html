@@ -29,7 +29,7 @@
                 console.log(member[0].children[0].firstChild.data)
                 for (i = 0; i < member.length; i++) { 
                     if (i != 0) { members += ", "; }                    
-                    for (j=0; j < member.children.length; j++){
+                    for (j=0; j < member[i].children.length; j++){
                         members += member[i]. children[j].parentNode +" : " + member[i].children[j].firstChild.data + "<br />"
                                 /*+  "성별 : " + member[i].children[j].firstChild.data + "<br />"
                                 +  "출생연도 : " + member[i].children[j].firstChild.data + "<br />"
