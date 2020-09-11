@@ -3,11 +3,11 @@
   <name>OO그룹</name>
   <members>
     <member>
-      <name>사람1</name>
-      <sex>남</sex>
-      <by>1970</by>
-      <bm>9</bm>
-      <bd>13</bd>
+      <name kr="이름">사람1</name>
+      <sex kr="성별">남</sex>
+      <by kr="출생연도">1970</by>
+      <bm kr="출생월">9</bm>
+      <bd kr="출생일">13</bd>
     </member>
     <member>
       <name>사람2</name>
