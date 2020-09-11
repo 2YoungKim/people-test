@@ -24,18 +24,11 @@
                 var members = "";
                 var member = xmlDoc.getElementsByTagName("member");
                 var name = xmlDoc.getElementsByTagName("name");
-                console.log(member)
-                console.log(member[0].children.length)
-                console.log(member[0].children[0].firstChild.data)
+
                 for (i = 0; i < member.length; i++) { 
-                    if (i != 0) { members += ", "; }                    
+                    if (i != 0) { members += "<br />"; }                    
                     for (j=0; j < member[i].children.length; j++){
-                        members += member[i]. children[j].parentNode +" : " + member[i].children[j].firstChild.data + "<br />"
-                                /*+  "성별 : " + member[i].children[j].firstChild.data + "<br />"
-                                +  "출생연도 : " + member[i].children[j].firstChild.data + "<br />"
-                                +  "월 : " + member[i].children[j].firstChild.data + "<br />"
-                                +  "일 : " + member[i].children[j].firstChild.data + "<br />"
-                                +  "<br />"*/;
+                        members += member[i]. children[j].nodeName +" : " + member[i].children[j].firstChild.data + "<br />";
                     }
                 }
                 document.getElementById("members").innerHTML = members;
@@ -48,14 +41,7 @@
                 }
                 document.getElementById("albums").innerHTML = albums;
             }
-            /*
-            $.getJSON('people.json', function(data) {
-                $.each(data.person, function(i, f) {
-                    var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
-                    "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
-                    $(tblRow).appendTo("#userdata tbody");
-                });
-            */
+
         </script>
         <title>AJAX Sample</title>
     </head>
@@ -64,7 +50,5 @@
         <h2 id="gname"></h2>
         <p>멤버 구성: </p>
         <span id="members"></span>
-        <h3>앨범 목록</h3>
-        <ul id="albums"></ul>
     </body>
 </html>
