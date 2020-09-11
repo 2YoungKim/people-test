@@ -23,6 +23,7 @@
  
                 var members = "";
                 var member = xmlDoc.getElementsByTagName("member");
+                console.log(member)
                 for (i = 0; i < member.length; i++) { 
                     if (i != 0) { members += ", "; }
                     members += "이름 : " + member[i].name.firstChild.data + "<br />"
@@ -30,11 +31,8 @@
                             +  "출생연도 : " + member[i].by.firstChild.data + "<br />"
                             +  "월 : " + member[i].bm.firstChild.data + "<br />"
                             +  "일 : " + member[i].bd.firstChild.data + "<br />"
-                            +  "<br />"
-                               
-                    ;
+                            +  "<br />";
                 }
-                console.log(member)
                 document.getElementById("members").innerHTML = members;
  
                 var albums = "";
