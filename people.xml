@@ -10,18 +10,11 @@
       <bd kr="출생일">13</bd>
     </member>
     <member>
-      <name>사람2</name>
-      <sex>여</sex>
-      <by>1974</by>
-      <bm>12</bm>
-      <bd>1</bd>
+      <name kr="이름">사람2</name>
+      <sex kr="성별">여</sex>
+      <by kr="출생연도">1974</by>
+      <bm kr="출생월">12</bm>
+      <bd kr="출생일">1</bd>
     </member>
   </members>
-
-  <albums>
-    <album order="EP 1집">Season of Glass</album>
-    <album order="EP 2집">Flower Bud</album>
-    <album order="EP 3집">Snowflake</album>
-    <album order="정규 1집">LOL</album>
-  </albums>
 </group>
