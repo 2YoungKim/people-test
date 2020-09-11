@@ -25,7 +25,12 @@
                 var member = xmlDoc.getElementsByTagName("member");
                 for (i = 0; i < member.length; i++) { 
                     if (i != 0) { members += ", "; }
-                    members += member[i].firstChild.data;
+                    members += "이름 : " + member[i].name.firstChild.data + "<br />"
+                               "성별 : " + member[i].sex.firstChild.data + "<br />"
+                               "출생연도 : " + member[i].by.firstChild.data + "<br />"
+                               "월 : " + member[i].bm.firstChild.data + "<br />"
+                               "일 : " + member[i].bd.firstChild.data + "<br />"
+                    ;
                 }
                 document.getElementById("members").innerHTML = members;
  
@@ -37,13 +42,22 @@
                 }
                 document.getElementById("albums").innerHTML = albums;
             }
+            /*
+            $.getJSON('people.json', function(data) {
+                $.each(data.person, function(i, f) {
+                    var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
+                    "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+                    $(tblRow).appendTo("#userdata tbody");
+                });
+            */
         </script>
         <title>AJAX Sample</title>
     </head>
  
     <body onload="loadDoc();">
         <h2 id="gname"></h2>
-        <p>멤버 구성: <span id="members"></span></p>
+        <p>멤버 구성: </p>
+        <span id="members"></span>
         <h3>앨범 목록</h3>
         <ul id="albums"></ul>
     </body>
