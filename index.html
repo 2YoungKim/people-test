@@ -26,11 +26,14 @@
                 console.log(member)
                 for (i = 0; i < member.length; i++) { 
                     if (i != 0) { members += ", "; }
-                    members += "이름 : " + member[i]['name'].firstChild.data + "<br />"
-                            +  "성별 : " + member[i]['sex'].firstChild.data + "<br />"
-                            +  "출생연도 : " + member[i]['by'].firstChild.data + "<br />"
-                            +  "월 : " + member[i]['bm'].firstChild.data + "<br />"
-                            +  "일 : " + member[i]['bd'].firstChild.data + "<br />"
+                    for (j = 0; j<member[i].childNodes.length; j++) {
+                        members += ""
+                    }
+                    members += "이름 : " + member[i].childNodes[j].data + "<br />"/*
+                            +  "성별 : " + member[i].firstChild.data + "<br />"
+                            +  "출생연도 : " + member[i].firstChild.data + "<br />"
+                            +  "월 : " + member[i].firstChild.data + "<br />"
+                            +  "일 : " + member[i].firstChild.data + "<br />"*/
                             +  "<br />";
                 }
                 document.getElementById("members").innerHTML = members;
