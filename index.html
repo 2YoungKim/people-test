@@ -28,18 +28,10 @@
                 for (i = 0; i < member.length; i++) { 
                     if (i != 0) { members += "<br />"; }                    
                     for (j=0; j < member[i].children.length; j++){
-                        members += member[i]. children[j].nodeName +" : " + member[i].children[j].firstChild.data + "<br />";
+                        members += member[i]. children[j].getAttribute('kr') +" : " + member[i].children[j].firstChild.data + "<br />";
                     }
                 }
                 document.getElementById("members").innerHTML = members;
- 
-                var albums = "";
-                var album = xmlDoc.getElementsByTagName("album");
-                for (i = 0; i < album.length; i++) { 
-                    albums += "<li>" + album[i].getAttribute('order') + ": " +
-                    album[i].firstChild.data + "</li>\n";
-                }
-                document.getElementById("albums").innerHTML = albums;
             }
 
         </script>
